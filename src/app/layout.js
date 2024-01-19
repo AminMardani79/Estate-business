@@ -1,6 +1,6 @@
 import Layout from "@/layout/Layout";
 import "./globals.css";
-import { yekan } from "@/utilsfonts";
+import { yekan } from "@/utils/fonts";
 
 export default function RootLayout({ children }) {
   return (
