@@ -5,8 +5,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    const { email, password } = await req.body;
-
+    const { email, password } = await req.json();
     await connectDB();
 
     if (!email || !password) {
@@ -31,7 +30,7 @@ export async function POST(req) {
 
     const newUser = await User.create({
       email,
-      password: hashPassword(password),
+      password: (await hashPassword(password)).toString(),
     });
 
     console.log(newUser);
