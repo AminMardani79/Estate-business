@@ -5,7 +5,7 @@ import NextAuthProvider from "@/providers/NextAuthProvider";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <body className={yekan.className}>
         <NextAuthProvider>
           <Layout>{children}</Layout>
